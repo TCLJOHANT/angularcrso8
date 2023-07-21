@@ -1,0 +1,11 @@
+<h1>{{title}}</h1>
+<button (click)="cambiarTitle()">Cambiar de titulo</button>
+<br>
+<input type="text" [(ngModel)]="nuevoArtista" (keydown.enter)="agregarArtista()"> {{nuevoArtista}}
+<br>
+<button (click)="agregarArtista()">Agregar Artista</button>
+<ul>
+  <li *ngFor="let artista of listaArtistas">
+    {{artista}}
+  </li>
+</ul>

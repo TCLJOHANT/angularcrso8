@@ -1,0 +1,13 @@
+//instalar o Actualizar node y npm en mi caso
+    sudo su
+    apt update
+    npm install -g n
+    n stable
+    npm install -g npm@latest
+//instalacion Angular
+    sudo npm i @angular/cli
+    ng version
+/crear app
+    ng new app (routing yes, scss)
+//servir app
+    ng serve ( http://localhost:4200/)
