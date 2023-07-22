@@ -31,6 +31,8 @@
 <div *ngFor="let artista of Artistas">
   Nombre:{{artista.nombre}} <br>
   Genero:{{artista.genero}} <br>
-  edad:{{artista.edad}} <br>
  <img [src]="artista.img" alt="" width="100px">
 </div>
+
+<!--itera sobre el array "Canciones". Dentro de cada iteración, pasas la canción actual como entrada al componente "CancionComponent" utilizando la sintaxis  [cancion]='cancion' . -->
+<app-cancion [cancion]='cancion'  *ngFor="let cancion of Canciones"></app-cancion>

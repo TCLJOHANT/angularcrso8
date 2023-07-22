@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
+import {Cancion} from './models/cancion.model';
 //interfas de artista
 interface Artista{
   nombre:String,
   genero:String,
-  edad:number
   img:String
 }
 
@@ -20,16 +20,36 @@ export class AppComponent {
     {
       nombre:'Anuel AA',
       genero:'REGUETON',
-      edad:30,
       img:'assets/IMG/ANUEL-AA.jpg'
     },
     {
       nombre:'Bryce savage',
       genero:'hip hop',
-      edad:25,
       img:'assets/IMG/bryce-savage.jpeg'
     }
-  ]
+  ];
+  
+  Canciones:Cancion[]=[
+    {
+      titulo:'Hasta que dios diga',
+      imagen:'assets/IMG/canciones/hastaquediosdiga.jpg',
+      duracion:200,
+      descripcion:'de anuel AA',
+    },
+    {
+      titulo: 'Despacito',
+      imagen: 'assets/IMG/hastaquediosdiga.jpg',
+      duracion: 230,
+      descripcion: 'de Luis Fonsi y Daddy Yankee'
+    },
+    {
+      titulo: 'Gasolina',
+      imagen: 'assets/IMG/hastaquediosdiga.jpg',
+      duracion: 210,
+      descripcion: 'de Daddy Yankee',
+    },
+  ];
+
 
   cambiarTitle(){
     this.title = 'new titulo';

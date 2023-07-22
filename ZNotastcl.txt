@@ -11,3 +11,7 @@
     ng new app (routing yes, scss)
 //servir app
     ng serve ( http://localhost:4200/)
+
+//componentes
+    //generarlo
+        ng g c nameComponent
