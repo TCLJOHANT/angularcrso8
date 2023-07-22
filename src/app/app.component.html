@@ -4,8 +4,33 @@
 <input type="text" [(ngModel)]="nuevoArtista" (keydown.enter)="agregarArtista()"> {{nuevoArtista}}
 <br>
 <button (click)="agregarArtista()">Agregar Artista</button>
+<button (click)="arrayArtistaVacio()">Borrar artistas</button>
 <ul>
-  <li *ngFor="let artista of listaArtistas">
-    {{artista}}
+  <li *ngIf=" listaArtistas.length === 0">
+    No existen artistas, puedes agregar uno
+  </li>
+  <!-- for -->
+  <li *ngFor="let artista of listaArtistas; index as i">
+    {{artista}} {{i}}
+    <button (click)="deleteItem(i)">Eliminar</button>
+    <button (click)="updateItem(i)">Actualizar</button>
   </li>
 </ul>
+<!-- if -->
+<h1 *ngIf="nuevoArtista ==='tcljohan+'">
+  llego el maestro {{nuevoArtista}}
+</h1> 
+<!-- switch -->
+<div [ngSwitch]="nuevoArtista">
+  <p *ngSwitchCase="'julian'">es un nombre concencional</p>
+  <p *ngSwitchCase="'camilo'">es un nombre muy frcuente</p>
+  <p *ngSwitchDefault="">valor por defecto</p>
+</div>
+<!-- imprimir un objeto -->
+<h3>imprimiendo un objeto (json)</h3>
+<div *ngFor="let artista of Artistas">
+  Nombre:{{artista.nombre}} <br>
+  Genero:{{artista.genero}} <br>
+  edad:{{artista.edad}} <br>
+ <img [src]="artista.img" alt="" width="100px">
+</div>
