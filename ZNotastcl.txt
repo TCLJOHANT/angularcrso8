@@ -5,6 +5,7 @@
     n stable
     npm install -g npm@latest
 //instalacion Angular
+    sudo npm install -g @angular/cli
     sudo npm i @angular/cli
     ng version
 /crear app
